@@ -3,7 +3,7 @@ public class Menu
     private List<Usuario> usuarios = new List<Usuario>();
     public void Opciones()
     {
-        string input;
+        string? input;
         do
         {
             Console.Clear();
@@ -64,7 +64,7 @@ public class Menu
                     Console.WriteLine("------------------------------------");
                     Console.WriteLine("Escribe nombre");
                     input = Console.ReadLine();
-                    usuario.Nombre = input == null ? "no nombre" : input;
+                    usuario.Nombre = input ?? input; // en teoria hace lo mismo que input == null ? "no nombre" : input
                     opcion++;
                     break;
                 case 2:
