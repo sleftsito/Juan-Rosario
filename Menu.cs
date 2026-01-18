@@ -51,8 +51,8 @@ public class Menu
     public void AgregarUsuario() //No estoy seguro si esto deberia de estar en esta clase.
     {
         int opcion= 1;
-        string input;
-        Usuario usuario = new Usuario();
+        string? input; // ? permite que el objeto pueda ser null
+        Usuario usuario = new(); //Parece que tambien se puede llamar al constructor de una clase asi
 
         while(opcion <= 4)
         {
